@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7FBFD">
+
+    <!-- Toolbar Lebar dan Penuh -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_button"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Kembali"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/txtDetailToolbarTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Detail Layanan"
+                android:textColor="#172554"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Empty view for layout balance -->
+            <View
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Konten Detail Scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/imgDetail"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ambulance"
+                android:contentDescription="Detail Ikon" />
+
+            <TextView
+                android:id="@+id/txtDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Judul Layanan"
+                android:textColor="#172554"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDetailDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Deskripsi lengkap mengenai layanan darurat ini. Tim kami siap siaga 24/7 untuk membantu Anda dalam situasi darurat."
+                android:textColor="#64748B"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnActionDetail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="#EF4444"
+                android:text="Hubungi Sekarang"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
