@@ -1,10 +1,12 @@
 package com.example.syahlla_project
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.syahlla_project.databinding.FragmentHomeBinding
 
@@ -76,6 +78,23 @@ class HomeFragment : Fragment() {
                 R.drawable.kecelakaan
             )
         }
+
+        // Pertolongan Pertama Dasar (Web Link)
+        val openWebLink = View.OnClickListener {
+            val url = "https://hellosehat.com/hidup-sehat/pertolongan-pertama/pertolongan-pertama-dasar/"
+            try {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(
+                    requireContext(),
+                    "Tidak dapat membuka browser",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+        binding.cardPertolonganPertama.setOnClickListener(openWebLink)
+        binding.btnBacaWeb.setOnClickListener(openWebLink)
     }
 
     private fun openDetail(

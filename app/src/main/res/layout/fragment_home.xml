@@ -270,6 +270,118 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Edukasi Pertolongan Pertama (Web Link Banner dengan Background Foto) -->
+        <TextView
+            android:id="@+id/txtEdukasiTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Edukasi Pertolongan Pertama"
+            android:textColor="#172554"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/cardKeamanan"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPertolonganPertama"
+            android:layout_width="0dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/txtEdukasiTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Foto Background CPR / Pertolongan Pertama -->
+                <ImageView
+                    android:id="@+id/imgCardBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pertolonganpertama"
+                    android:contentDescription="Foto Background Pertolongan Pertama" />
+
+                <!-- Dark Overlay untuk keterbacaan teks -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#A6000000" />
+
+                <!-- Konten Teks & Tombol -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <!-- Badge Logo/Sumber -->
+                    <TextView
+                        android:id="@+id/txtBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="#DC2626"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:text="HELLO SEHAT"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Judul Utama -->
+                    <TextView
+                        android:id="@+id/txtBannerHeadline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Pertolongan Pertama Dalam Genggaman"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/txtBadge"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Subtitle / Penjelasan Singkat -->
+                    <TextView
+                        android:id="@+id/txtBannerSub"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Pelajari panduan dasar menangani situasi darurat"
+                        android:textColor="#E2E8F0"
+                        android:textSize="11sp"
+                        app:layout_constraintTop_toBottomOf="@id/txtBannerHeadline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Tombol Lanjut ke Web -->
+                    <TextView
+                        android:id="@+id/btnBacaWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="#DC2626"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="6dp"
+                        android:text="KLIK DISINI  ›"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
         <!-- Lokasi Saya -->
         <TextView
             android:id="@+id/txtLokasiTitle"
@@ -280,7 +392,7 @@
             android:textColor="#172554"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/cardKeamanan"
+            app:layout_constraintTop_toBottomOf="@id/cardPertolonganPertama"
             app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Peta -->
