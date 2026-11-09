@@ -7,12 +7,15 @@
     android:background="#F7FBFD"
     android:padding="24dp">
 
+    <!-- Foto Profil -->
     <ImageView
         android:id="@+id/imgProfileAkun"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/bg_button"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="4dp"
         android:padding="16dp"
         android:src="@drawable/user"
         android:contentDescription="Foto Profil"

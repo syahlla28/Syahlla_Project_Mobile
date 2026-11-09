@@ -95,6 +95,32 @@ class HomeFragment : Fragment() {
         }
         binding.cardPertolonganPertama.setOnClickListener(openWebLink)
         binding.btnBacaWeb.setOnClickListener(openWebLink)
+
+        // Menu Cepat Grid Actions
+        binding.btnMenuMedis.setOnClickListener {
+            openDetail("Bantuan Medis", "Informasi layanan ambulans dan bantuan medis darurat.", R.drawable.ambulance)
+        }
+        binding.btnMenuKebakaran.setOnClickListener {
+            openDetail("Kebakaran", "Informasi bantuan pemadam kebakaran dan penanganan darurat.", R.drawable.bomba)
+        }
+        binding.btnMenuKeamanan.setOnClickListener {
+            openDetail("Keamanan", "Informasi bantuan kepolisian dan keamanan darurat.", R.drawable.keamanan)
+        }
+        binding.btnMenuBencana.setOnClickListener {
+            openDetail("Bencana", "Informasi kesiapsiagaan dan evakuasi bencana.", R.drawable.kecelakaan)
+        }
+        binding.btnMenuPanduan.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, PanduanFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+        binding.btnMenuKontak.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, MessageFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     private fun openDetail(

@@ -382,6 +382,116 @@
             </FrameLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Menu Cepat (GridLayout) -->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:columnCount="3"
+            app:useDefaultMargins="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardPertolonganPertama">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuMedis"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Medis"
+                android:textColor="#172554"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="2dp"
+                app:iconGravity="textStart"
+                app:iconTint="#2563EB"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuKebakaran"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Kebakaran"
+                android:textColor="#172554"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="2dp"
+                app:iconGravity="textStart"
+                app:iconTint="#DC2626"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuKeamanan"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Keamanan"
+                android:textColor="#172554"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="2dp"
+                app:iconGravity="textStart"
+                app:iconTint="#2563EB"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuBencana"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Bencana"
+                android:textColor="#172554"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="2dp"
+                app:iconGravity="textStart"
+                app:iconTint="#D97706"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuPanduan"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Panduan"
+                android:textColor="#172554"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="2dp"
+                app:iconGravity="textStart"
+                app:iconTint="#2563EB"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenuKontak"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Kontak"
+                android:textColor="#172554"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="2dp"
+                app:iconGravity="textStart"
+                app:iconTint="#2563EB"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
         <!-- Lokasi Saya -->
         <TextView
             android:id="@+id/txtLokasiTitle"
@@ -392,7 +502,7 @@
             android:textColor="#172554"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/cardPertolonganPertama"
+            app:layout_constraintTop_toBottomOf="@id/gridMenu"
             app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Peta -->

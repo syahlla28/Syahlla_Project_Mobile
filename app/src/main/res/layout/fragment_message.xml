@@ -49,15 +49,70 @@
         app:layout_constraintBottom_toBottomOf="@id/txtKontakTitle"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Input Nomor Telepon -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_rounded_container"
+        android:hint="Cari atau Input Nomor Telepon"
+        android:inputType="phone"
+        android:textColor="#172554"
+        android:textColorHint="#94A3B8"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtKontakTitle" />
+
+    <!-- Filter ChipGroup -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTerbaru"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Terbaru"
+            app:chipIconTint="#2563EB" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPenting"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penting"
+            app:chipIconTint="#2563EB" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipKeluarga"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keluarga"
+            app:chipIconTint="#2563EB" />
+
+    </com.google.android.material.chip.ChipGroup>
+
     <!-- ListView for Contacts -->
     <ListView
         android:id="@+id/listMessageItems"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
-        app:layout_constraintTop_toBottomOf="@id/txtKontakTitle"
+        app:layout_constraintTop_toBottomOf="@id/chipGroupFilter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

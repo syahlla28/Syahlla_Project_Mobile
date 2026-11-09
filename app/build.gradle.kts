@@ -43,7 +43,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    implementation("androidx.gridlayout:gridlayout:1.1.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 
     testImplementation(libs.junit)
 

@@ -36,11 +36,9 @@ class PanduanFragment : Fragment() {
             mapOf("title" to "Keselamatan Sehari-hari", "desc" to "Tips mencegah kecelakaan di rumah dan mengenali nomor darurat SOS.")
         )
 
-        // Mapping data ke kunci yang dibaca SimpleAdapter
         val from = arrayOf("title", "desc")
         val to = intArrayOf(R.id.text1, R.id.text2)
 
-        // Membuat SimpleAdapter menggunakan layout bawaan android.R.layout.simple_list_item_2
         val adapter = SimpleAdapter(
             requireContext(),
             panduanList,
@@ -49,10 +47,8 @@ class PanduanFragment : Fragment() {
             to
         )
 
-        // Menerapkan adapter ke ListView
         binding.listViewItems.adapter = adapter
 
-        // Menambahkan setOnItemClickListener
         binding.listViewItems.setOnItemClickListener { _, _, position, _ ->
             val selectedItem = panduanList[position]
             val title = selectedItem["title"]

@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import com.example.syahlla_project.LoginActivity
-import com.example.syahlla_project.MainActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -28,8 +26,15 @@ class SplashScreenActivity : AppCompatActivity() {
                 false
             )
 
+            val isTutorialShown = sharedPref.getBoolean(
+                "isTutorialShown",
+                false
+            )
+
             val targetActivity = if (isLogin) {
                 MainActivity::class.java
+            } else if (!isTutorialShown) {
+                TutorialMessageActivity::class.java
             } else {
                 LoginActivity::class.java
             }
